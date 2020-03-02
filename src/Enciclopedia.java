@@ -68,22 +68,47 @@ public class Enciclopedia {
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+        return livros.get(posicao).getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        return null;
+        List emPDF = new ArrayList();
+        for(Livro livro : livros) {
+            if (livro.getFormatos().contains(Formato.PDF)) {
+                emPDF.add(livro);
+            }
+        }
+        return emPDF;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+        List porAutora = new ArrayList();
+        for (Livro livro : livros) {
+            if(livro.getAutores().equals(nomeCompleto)) {
+                porAutora.add(livro);
+            }
+        }
+        return porAutora;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        return null;
+        List porAnoLancamento = new ArrayList();
+        for (Livro livro : livros) {
+            if (livro.getAnoLancamento() == ano) {
+                porAnoLancamento.add(livro);
+            }
+        }
+        return porAnoLancamento;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
-        return null;
+        List porPeriodo = new ArrayList();
+        for (Livro livro : livros) {
+            int ano = livro.getAnoLancamento();
+            if (ano >= inicio && ano <= fim){
+                porPeriodo.add(livro);
+            }
+        }
+        return porPeriodo;
     }
 }
