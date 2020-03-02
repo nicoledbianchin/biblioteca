@@ -1,2 +1,5 @@
-public class Formato {
+public enum Formato {
+    FISICO,
+    PDF,
+    EBOOK
 }
