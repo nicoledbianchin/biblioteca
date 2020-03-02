@@ -35,4 +35,12 @@ public class Livro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+    public void adicionarAutores(Autor autor){
+        this.autores.add(autor);
+    }
+
+    public void adicionarFormato(Formato formato){
+        this.formatos.add(formato);
+    }
 }
