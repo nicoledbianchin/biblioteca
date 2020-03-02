@@ -6,6 +6,7 @@ public class Enciclopedia {
     private List<Livro> livros = new ArrayList<>();
 
     public Enciclopedia() {
+        Livro livro1 = new Livro(EB)
     }
 
     public String tituloDoEnesimoLivro(int posicao) {

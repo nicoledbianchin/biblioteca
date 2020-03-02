@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
+    private String titulo;
+    private int anoLancamento;
     private List<Formato> formatos;
     private List<Autor> autores;
-    private int anoLancamento;
-    private String titulo;
 
-    Livro (List<Formato> formatos, List<Autor> autores){
-        this.formatos = formatos;
-        this.autores = autores;
+    Livro (){
+        formatos = new ArrayList<>();
+        autores = new ArrayList<>();
     }
 
     public List<Formato> getFormatos() {
